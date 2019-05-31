@@ -27,10 +27,13 @@ void prepareToRender(int argc, char *argv[]) {
         printf("api 不支持！\n");
     }
     shaderManager.InitializeStockShaders();
+    // 刷新颜色缓冲区使用的颜色
+    glClearColor(1, 1, 0, 1);
 }
 
 void render(void) {
-
+    // 刷新颜色缓冲区
+    glClear(GL_COLOR_BUFFER_BIT);
     GLfloat rgbaColor[] = {1,0,0,1};
     // 指定着色器
     shaderManager.UseStockShader(GLT_SHADER_IDENTITY, rgbaColor);

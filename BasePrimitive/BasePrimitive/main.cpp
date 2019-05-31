@@ -32,15 +32,15 @@ void prepareToRender(int argc, char *argv[]) {
 }
 
 void render(void) {
-    // 刷新颜色缓冲区
-    glClear(GL_COLOR_BUFFER_BIT);
-    GLfloat rgbaColor[] = {1,0,0,1};
-    // 指定着色器
-    shaderManager.UseStockShader(GLT_SHADER_IDENTITY, rgbaColor);
-    // 开始绘制
-    pointBatch.Draw();
-    // 交换缓冲区
-    glutSwapBuffers();
+//    // 刷新颜色缓冲区
+//    glClear(GL_COLOR_BUFFER_BIT);
+//    GLfloat rgbaColor[] = {1,0,0,1};
+//    // 指定着色器
+//    shaderManager.UseStockShader(GLT_SHADER_IDENTITY, rgbaColor);
+//    // 开始绘制
+//    pointBatch.Draw();
+//    // 交换缓冲区
+//    glutSwapBuffers();
 }
 
 void registerCallback(void) {
@@ -78,14 +78,24 @@ void setupVertexData() {
         0, 0.5, 0,
         0, 0, 0.5,
     };
+//    glPointSize(5);
+//        // 指定渲染的图元方式和顶点数量（x,y,z）为一个顶点
+////    pointBatch.Begin(GL_POINTS, 3);
+//    pointBatch.Begin(GL_LINE_LOOP, 3);
+//        // 复制顶点数据，处理成向量顶点的形式
+//    pointBatch.CopyVertexData3f(vertexes);
+//        // 结束处理，和begin成套
+//    pointBatch.End();
+
+    // TODO: TODO - 不使用着色器，为什么只有一个点？
+    glClear(GL_COLOR_BUFFER_BIT);
     glPointSize(5);
-        // 指定渲染的图元方式和顶点数量（x,y,z）为一个顶点
-//    pointBatch.Begin(GL_POINTS, 3);
-    pointBatch.Begin(GL_LINE_LOOP, 3);
-        // 复制顶点数据，处理成向量顶点的形式
+    glColor4f(1, 0, 0, 1);
+    pointBatch.Begin(GL_POINTS, 3);
     pointBatch.CopyVertexData3f(vertexes);
-        // 结束处理，和begin成套
     pointBatch.End();
+    pointBatch.Draw();
+    glutSwapBuffers();
 }
 
 

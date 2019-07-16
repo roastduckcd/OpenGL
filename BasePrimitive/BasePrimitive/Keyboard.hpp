@@ -10,7 +10,9 @@
 #define Keyboard_hpp
 
 #include <stdio.h>
+#include "GLTools.h"
 
+extern GLBatch pointBatch;
 
 void specialKeyAction(int key, int x, int y);
 

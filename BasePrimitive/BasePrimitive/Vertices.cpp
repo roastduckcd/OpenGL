@@ -11,7 +11,7 @@
 
 GLfloat *getVertices(int *count) {
     static GLfloat vertices[] = {
-        -0.5, 0, 0,
+        0.5, 0, 0,
         0, 0.5, 0,
         0, 0, 0.5,
     };

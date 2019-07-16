@@ -25,6 +25,7 @@ void render(void) {
     // 刷新颜色缓冲区
     glClear(GL_COLOR_BUFFER_BIT);
     GLfloat rgbaColor[] = {1,0,0,1};
+    
     // 指定着色器
     shaderManager.UseStockShader(GLT_SHADER_IDENTITY, rgbaColor);
     // 开始绘制

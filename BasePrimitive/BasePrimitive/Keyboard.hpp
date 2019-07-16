@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+
+void specialKeyAction(int key, int x, int y);
+
+
 #endif /* Keyboard_hpp */

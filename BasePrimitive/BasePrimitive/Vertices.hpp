@@ -23,7 +23,7 @@
 #include <GL/glut.h>
 #endif
 
-
+GLfloat *getVertices(int *count);
 void setupVertexData(GLBatch *batch);
 
 #endif /* Vertices_hpp */

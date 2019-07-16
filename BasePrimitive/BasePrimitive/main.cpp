@@ -37,6 +37,8 @@ void render(void) {
 void registerCallback(void) {
     // 注册渲染回调
     glutDisplayFunc(render);
+    // 注册特殊键位回调：方向键，F功能键等非ASCII键位
+    glutSpecialFunc(specialKeyAction);
 }
 
 
@@ -44,12 +46,12 @@ int main(int argc, char *argv[]) {
 //    static_assert(false, "请修改 PublicOpenGLHeaderPath 为你的工程目录（include上一级目录）: $(SRCROOT)/工程名");
 
     prepareToRender(argc, argv);
-
+    
     registerCallback();
 
 //    simplistPipeline();
     setupVertexData(&pointBatch);
-
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
         // 开启监听循环
     glutMainLoop();
     return 0;

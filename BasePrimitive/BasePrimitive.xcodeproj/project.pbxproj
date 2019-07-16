@@ -302,6 +302,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.BasePrimitive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PublicOpenGLHeaderPath = /Users/yangsong/iCollections/LEARN/learning_demo/OpenGL/PublicOpenGLHeader;
 			};
 			name = Debug;
 		};
@@ -323,6 +324,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.BasePrimitive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PublicOpenGLHeaderPath = /Users/yangsong/iCollections/LEARN/learning_demo/OpenGL/PublicOpenGLHeader;
 			};
 			name = Release;
 		};

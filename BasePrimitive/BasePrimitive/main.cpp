@@ -13,6 +13,8 @@
 #include "Vertices.hpp"
 #include "Keyboard.hpp"
 
+extern GLenum primi;
+
 GLBatch pointBatch;
 GLShaderManager shaderManager;
 
@@ -40,6 +42,8 @@ void registerCallback(void) {
     glutDisplayFunc(render);
     // 注册特殊键位回调：方向键，F功能键等非ASCII键位
     glutSpecialFunc(specialKeyAction);
+
+    glutKeyboardFunc(asciiKeyAction);
 }
 
 
@@ -51,7 +55,7 @@ int main(int argc, char *argv[]) {
     registerCallback();
 
 //    simplistPipeline();
-    setupVertexData(&pointBatch);
+    setupVertexData(&pointBatch, GL_TRIANGLE_STRIP);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
         // 开启监听循环
     glutMainLoop();

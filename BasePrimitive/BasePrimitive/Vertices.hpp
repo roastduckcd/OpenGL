@@ -24,6 +24,6 @@
 #endif
 
 GLfloat *getVertices(int *count);
-void setupVertexData(GLBatch *batch);
+void setupVertexData(GLBatch *batch, GLenum primitive);
 
 #endif /* Vertices_hpp */

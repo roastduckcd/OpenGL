@@ -15,6 +15,7 @@
 extern GLBatch pointBatch;
 
 void specialKeyAction(int key, int x, int y);
+void asciiKeyAction(unsigned char key, int x, int y);
 
 
 #endif /* Keyboard_hpp */
